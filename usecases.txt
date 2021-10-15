@@ -1,0 +1,1 @@
+docker run -e CI=true 20b424c56c24b7 npm run test -- --coverage

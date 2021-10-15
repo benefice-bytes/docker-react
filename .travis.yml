@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t octaviusjr/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true octaviusjr/docker-react npm run test -- --coverage
+
